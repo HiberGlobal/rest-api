@@ -131,7 +131,7 @@ curl https://rest.api.hiber.cloud/messages\?devices\=ABCD0123\&size\=2 -H "Autho
         "next": {
             "href": "https://rest.api.hiber.cloud/messages?devices=ABCD0123&size=2&page=1"
         },
-        "hiber:modems": [
+        "hiber:modem": [
             {
                 "href": "https://rest.api.hiber.cloud/modem/ABCD0123",
                 "title": "ABCD 0123"
