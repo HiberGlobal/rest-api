@@ -24,18 +24,18 @@ Since modem numbers are often "AAAA BBBB", the space can be omitted when using t
 
 The output is an object with two fields.
 
-The `messages` field is a json array containing messages, which are a json version of the `ModemMessage` object
-[in the grpc API](https://github.com/HiberGlobal/api/blob/master/docs/modem.md#modemmessage),
-though some fields may be omitted for simplicity.
+The `messageEvents` field is a json array containing messages, which are a json version of
+the `ModemEvent.MessageEvent.ModemMessageReceivedEvent` object
+[in the grpc API](https://github.com/HiberGlobal/api/blob/master/docs/event.md#eventmodemeventmessageeventmodemmessagereceivedevent).
 
 The other field is a `_links` field, as described in [readme](../README.md#hal).
 
 ### Example
 
-For the url `https://rest.api.hiber.cloud/messages?devices=ABCD0123&size=2`
+For the url `https://rest.api.hiber.cloud/message/events?devices=ABCD0123&size=2`
 
 ```
-curl https://rest.api.hiber.cloud/messages\?devices\=ABCD0123\&size\=2 -H "Authorization: Bearer <token>"
+curl https://rest.api.hiber.cloud/message/events\?devices\=ABCD0123\&size\=2 -H "Authorization: Bearer <token>"
 {
     "messageEvents": [
         {
