@@ -30,7 +30,8 @@ For example, each response will contain a field at `_links.self.href` that links
 or, when requesting a list (i.e. messages or message-events), it will contain `_links.next.href` for the next page.
 
 The `_links` also contains some simple specifications of available commands and documentation,
-defined using a (CURIE)[https://en.wikipedia.org/wiki/CURIE] under `_links.curies`.
+defined using a [CURIE](https://en.wikipedia.org/wiki/CURIE) under `_links.curies`
+and using [URI Templates](https://www.ietf.org/rfc/rfc6570.txt) like `messages{?from,to,devices,tags,groups,size,page}`.
 
 ## Endpoints
 

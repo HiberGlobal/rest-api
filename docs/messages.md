@@ -10,7 +10,7 @@ with a number of query parameters to select the messages to return.
 
 The query parameters are:
 - `from`: starting time for a time range, to list messages for a specific time
-- `to`: end time (inclusive) for a time range, to list messages for a specific time
+- `to`: end time for a time range, to list messages for a specific time
 - `modems`, `devices`: list messages for the given modem(s) only, comma-separated list of modem numbers
 - `tags`, `groups`: list messages for modems with the given tag(s) only, comma-separated list of tag names
 - `size`: the amount of messages to return per page
