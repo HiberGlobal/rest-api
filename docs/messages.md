@@ -9,16 +9,19 @@ This endpoint is available at
 with a number of query parameters to select the messages to return.
 
 The query parameters are:
-- `from`: starting time for a time range, to list messages for a specific time
-- `to`: end time for a time range, to list messages for a specific time
-- `modems`, `devices`: list messages for the given modem(s) only, comma-separated list of modem numbers
-- `tags`, `groups`: list messages for modems with the given tag(s) only, comma-separated list of tag names
-- `size`: the amount of messages to return per page
-- `page`: the page to return
+- `from` (timestamp): starting time for a time range, to list messages for a specific time
+- `to` (timestamp): end time for a time range, to list messages for a specific time
+- `modems`, `devices` (text, default all): list messages for the given modem(s) only, comma-separated list of modem numbers
+- `tags`, `groups` (text): list messages for modems with the given tag(s) only, comma-separated list of tag names
+- `size` (integer, default 10): the amount of messages to return per page
+- `page` (integer, default 0): the page to return
 
 Don't forget the auth token as described in the main [readme](../README.md#auth).
 
 Since modem numbers are often "AAAA BBBB", the space can be omitted when using this call (and anywhere else in the API).
+
+We support a number of different timestamp formats, but regardless of input we output time as
+[ISO-8601](https://www.iso.org/iso-8601-date-and-time-format.html) `YYYY-MM-DDTHH:mm:ss.sssZ`.
 
 ### Output format
 
