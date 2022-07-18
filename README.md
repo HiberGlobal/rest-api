@@ -46,7 +46,7 @@ The currently available endpoints are:
 For example:
 
 ```
-$ curl -v https://rest.hiber.cloud/modem/ABCD0123 -H "Authorization: Bearer <token>"
+$ curl -v https://rest.api.hiber.cloud/modem/ABCD0123 -H "Authorization: Bearer <token>"
 {
     "modem": {
         "organization": "hiber",
@@ -82,19 +82,19 @@ $ curl -v https://rest.hiber.cloud/modem/ABCD0123 -H "Authorization: Bearer <tok
     },
     "_links": {
         "self": {
-            "href": "https://rest.api.dev.env.hiber.cloud/modem/0E2C05C1"
+            "href": "https://rest.api.hiber.cloud/modem/0E2C05C1"
         },
         "hiber:messages": {
-            "href": "https://rest.api.dev.env.hiber.cloud/messages{?from,to,modems,devices,tags,groups,size,page}",
+            "href": "https://rest.api.hiber.cloud/messages{?from,to,modems,devices,tags,groups,size,page}",
             "templated": true
         },
         "hiber:message-events": {
-            "href": "https://rest.api.dev.env.hiber.cloud/message/events{?from,to,modems,devices,tags,groups,size,page}",
+            "href": "https://rest.api.hiber.cloud/message/events{?from,to,modems,devices,tags,groups,size,page}",
             "templated": true
         },
         "curies": [
             {
-                "href": "https://rest.api.dev.env.hiber.cloud/docs/rels/{rel}",
+                "href": "https://rest.api.hiber.cloud/docs/rels/{rel}",
                 "name": "hiber",
                 "templated": true
             }

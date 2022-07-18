@@ -23,6 +23,11 @@ Since modem numbers are often "AAAA BBBB", the space can be omitted when using t
 We support a number of different timestamp formats, but regardless of input we output time as
 [ISO-8601](https://www.iso.org/iso-8601-date-and-time-format.html) `YYYY-MM-DDTHH:mm:ss.sssZ`.
 
+Textual shortcuts for timestamps are also supported, like:
+  - "now": converted to the request time
+  - a duration as an offset of now, i.e. "-10h" or "PT-10h": converted to now + offset, so -10h is 10 hours before now
+    - For example, to fetch messages in the past hour, a request could use `from=-1h&to=now`.
+
 ### Output format
 
 The output is an object with two fields.
