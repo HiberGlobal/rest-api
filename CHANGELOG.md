@@ -2,6 +2,8 @@
 
 #### Upcoming Changes
 
+### 0.115 (2022-07-25)
+
 ### 0.114 (2022-07-18)
 
 - Added support for textual shortcuts in `from` and `to`:
