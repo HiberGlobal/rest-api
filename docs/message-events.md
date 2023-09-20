@@ -30,11 +30,14 @@ Textual shortcuts for timestamps are also supported, like:
 
 ### Output format
 
-The output is an object with two fields.
+The output is an object with three fields.
 
 The `messageEvents` field is a json array containing messages, which are a json version of
 the `ModemEvent.MessageEvent.ModemMessageReceivedEvent` object
 [in the grpc API](https://github.com/HiberGlobal/api/blob/master/docs/event.md#eventmodemeventmessageeventmodemmessagereceivedevent).
+
+The `pagination` field is a simple object with some pagination-related information, like the total amount of results
+and the current page number (starting from 0).
 
 The other field is a `_links` field, as described in [readme](../README.md#hal).
 

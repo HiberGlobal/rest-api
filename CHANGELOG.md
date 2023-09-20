@@ -1,5 +1,14 @@
 # Changelog Hiber Rest API
 
+### 0.164 (2023-09-19)
+
+- Added `pagination` to all list-type results, with
+  - `size`: the number of items per page
+  - `page`: the current page
+  - `total`: the total number of results
+  - `totalPages`: the total number of pages
+  - `approximation`: whether the total number of results/pages is an approximation
+
 ### 0.157 (2023-07-10)
 
 - Add `/modems` to list modems.

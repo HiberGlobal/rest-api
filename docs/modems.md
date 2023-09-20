@@ -15,6 +15,9 @@ The `modems` field is a json version of the `Modem` object
 [in the grpc API](https://github.com/HiberGlobal/api/blob/master/docs/modem.md#modem),
 though some fields may be omitted for simplicity.
 
+The `pagination` field is a simple object with some pagination-related information, like the total amount of results
+and the current page number (starting from 0).
+
 The other field is a `_links` field, as described in [readme](../README.md#hal).
 
 ### Example
