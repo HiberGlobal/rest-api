@@ -25,9 +25,20 @@ To authenticate when using the API, you will need:
 
 The currently available endpoints are:
 
-- [modem/{number}](docs/modem.md): get the details for a modem (spaces can be omitted from the number)
-- [messages{?from,to,modems,devices,tags,groups,size,page}](docs/messages.md): list messages
-- [message/events{?from,to,modems,devices,tags,groups,size,page}](docs/message-events.md): list message events
+- For assets:
+  - [assets](docs/assets.md): list assets
+  - [asset/{identifier}](docs/asset.md): get the details for an asset
+  - [values/asset{?from,to,asset,type,size,page}](docs/asset-values.md): get the values for an asset
+- For devices:
+  - [devices](docs/devices.md): list devices
+  - [device/{number}](docs/device.md): get the details for a device (spaces can be omitted from the number)
+  - [values/device{?from,to,device,type,size,page}](docs/device-values.md): get the values for a device
+  - [messages{?from,to,modems,devices,tags,groups,size,page}](docs/messages.md): list messages
+  - [message/events{?from,to,modems,devices,tags,groups,size,page}](docs/message-events.md): list message events
+- For modems (old terminology for devices):
+  - [modem/{number}](docs/modem.md): get the details for a modem (spaces can be omitted from the number)
+- For files:
+  - [file/{identifier}](docs/file.md): get a file
 
 ### Simple example
 

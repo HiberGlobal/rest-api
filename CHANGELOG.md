@@ -2,6 +2,7 @@
 
 ### 0.225 (2025-02-04)
 
+- Update README with all the paths.
 - Fix an issue where the documentation was not published.
 
 ### 0.212 (2024-10-08)
