@@ -15,10 +15,10 @@ Since numbers are often "AAAA BBBB", the space can be omitted when using this ca
 The output is an object with two fields.
 
 The `modem` field is a json version of the `Modem` object
-[in the grpc API](https://github.com/HiberGlobal/api/blob/master/docs/modem.md#modem),
+[in the grpc API](https://github.com/HiberGlobal/api/blob/master/docs/md/modem.md#modem),
 though some fields may be omitted for simplicity.
 
-The other field is a `_links` field, as described in [readme](../README.md#hal).
+The other field is a `_links` field.
 
 ### Example
 
@@ -60,22 +60,7 @@ $ curl -v https://rest.api.hiber.cloud/modem/ABCD0123 -H "Authorization: Bearer 
     "_links": {
         "self": {
             "href": "https://rest.api.hiber.cloud/modem/ABCD0123"
-        },
-        "hiber:messages": {
-            "href": "https://rest.api.hiber.cloud/messages{?from,to,modems,devices,tags,groups,size,page}",
-            "templated": true
-        },
-        "hiber:message-events": {
-            "href": "https://rest.api.hiber.cloud/message/events{?from,to,modems,devices,tags,groups,size,page}",
-            "templated": true
-        },
-        "curies": [
-            {
-                "href": "https://rest.api.hiber.cloud/docs/rels/{rel}",
-                "name": "hiber",
-                "templated": true
-            }
-        ]
+        }
     }
 }
 ```

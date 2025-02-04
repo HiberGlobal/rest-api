@@ -1,31 +1,31 @@
-# /modems
+# /device/{number}
 
-Get the list of modems (/devices).
+Get the details for a device with the given `number`, or 404 when not available.
 
 ## Usage
 
-Simply navigate to [rest.api.hiber.cloud/modems](https://rest.api.hiber.cloud/modems).
+Simply navigate to [rest.api.hiber.cloud/device/{number}](https://rest.api.hiber.cloud/device/{number}),
+where `{number}` is replaced with a device number.
 Don't forget the auth token as described in the main [readme](../README.md#auth).
+
+Since numbers are often "AAAA BBBB", the space can be omitted when using this call (and anywhere else in the API).
 
 ### Output format
 
 The output is an object with two fields.
 
-The `modems` field is a json version of the `Modem` object
-[in the grpc API](https://github.com/HiberGlobal/api/blob/master/docs/md/modem.md#modem),
+The `device` field is a json version of the `Device` object
+[in the grpc API](https://github.com/HiberGlobal/api/blob/master/docs/md/device.md#device),
 though some fields may be omitted for simplicity.
 
-The `pagination` field is a simple object with some pagination-related information, like the total amount of results
-and the current page number (starting from 0).
-
-The other field is a `_links` field, for pagination.
+The other field is a `_links` field.
 
 ### Example
 
 ```
-$ curl -v https://rest.api.hiber.cloud/modems?size=1&page=2 -H "Authorization: Bearer <token>"
+$ curl -v https://rest.api.hiber.cloud/device/ABCD0123 -H "Authorization: Bearer <token>"
 {
-    "modems": [{
+    "device": {
         "organization": "hiber",
         "number": "ABCD 0123",
         "name": "ABCD 0123",
@@ -56,24 +56,11 @@ $ curl -v https://rest.api.hiber.cloud/modems?size=1&page=2 -H "Authorization: B
                 }
             }
         ]
-    }],
+    },
     "_links": {
         "self": {
-            "href": "https://rest.api.hiber.cloud/modems?size=1&page=2"
-        },
-        "next": {
-            "href": "https://rest.api.hiber.cloud/modems?size=1&page=3"
-        },
-        "previous": {
-            "href": "https://rest.api.hiber.cloud/modems?size=1&page=1"
-        },
-        "curies": [
-            {
-                "href": "https://rest.api.hiber.cloud/docs/rels/{rel}",
-                "name": "hiber",
-                "templated": true
-            }
-        ]
+            "href": "https://rest.api.hiber.cloud/device/ABCD0123"
+        }
     }
 }
 ```

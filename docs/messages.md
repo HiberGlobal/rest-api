@@ -33,13 +33,13 @@ Textual shortcuts for timestamps are also supported, like:
 The output is an object with two fields.
 
 The `messages` field is a json array containing messages, which are a json version of the `ModemMessage` object
-[in the grpc API](https://github.com/HiberGlobal/api/blob/master/docs/modem.md#modemmessage),
+[in the grpc API](https://github.com/HiberGlobal/api/blob/master/docs/md/modem.md#modemmessage),
 though some fields may be omitted for simplicity.
 
 The `pagination` field is a simple object with some pagination-related information, like the total amount of results
 and the current page number (starting from 0).
 
-The other field is a `_links` field, as described in [readme](../README.md#hal).
+The other field is a `_links` field, for pagination.
 
 ### Example
 
@@ -154,28 +154,7 @@ curl https://rest.api.hiber.cloud/messages\?devices\=ABCD0123\&size\=2 -H "Autho
         },
         "next": {
             "href": "https://rest.api.hiber.cloud/messages?devices=ABCD0123&size=2&page=1"
-        },
-        "hiber:modem": [
-            {
-                "href": "https://rest.api.hiber.cloud/modem/ABCD0123",
-                "title": "ABCD 0123"
-            }
-        ],
-        "hiber:messages": {
-            "href": "https://rest.api.hiber.cloud/messages{?from,to,devices,tags,groups,size,page}",
-            "templated": true
-        },
-        "hiber:message-events": {
-            "href": "https://rest.api.hiber.cloud/message/events{?from,to,devices,tags,groups,size,page}",
-            "templated": true
-        },
-        "curies": [
-            {
-                "href": "https://rest.api.hiber.cloud/docs/rels/{rel}",
-                "name": "hiber",
-                "templated": true
-            }
-        ]
+        }
     }
 }
 ```
