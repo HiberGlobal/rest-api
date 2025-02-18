@@ -1,5 +1,14 @@
 # Changelog Hiber Rest API
 
+### 0.227 (2025-02-18)
+
+- added `/me` to get information about the current token and permissions
+
+- Added `/file/{identifier}` to get a file from the Rest API
+  - Also supports DELETE to delete a file.
+  - Added `/file/{identifier}/metadata` to get metadata for a file.
+- Added `/asset/{identifier}/file/` (POST only) to upload a file to an asset (using `multipart/form-data`).
+
 ### 0.225 (2025-02-04)
 
 - Update README with all the paths.
