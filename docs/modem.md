@@ -1,14 +1,15 @@
 # /modem/{number}
 
-Get the details for a modem with the given `number`, or 404 when not available.
+Get the details for a modem with the given `identifier`, or 404 when not available.
 
 ## Usage
 
-Simply navigate to [rest.api.hiber.cloud/modem/{number}](https://rest.api.hiber.cloud/modem/{number}),
-where `{number}` is replaced with a modem number.
+Simply navigate to [rest.api.hiber.cloud/modem/{identifier}](https://rest.api.hiber.cloud/modem/{identifier}),
+where `{identifier}` is replaced with a modem identifier (like the number, e.g. `ABCD EFGH`, or the DevEUI).
 Don't forget the auth token as described in the main [readme](../README.md#auth).
 
-Since numbers are often "AAAA BBBB", the space can be omitted when using this call (and anywhere else in the API).
+While identifiers are often formatted with spaces, these can be omitted when using this call
+(and anywhere else in the API).
 
 ### Output format
 

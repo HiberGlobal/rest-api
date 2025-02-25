@@ -1,5 +1,21 @@
 # Changelog Hiber Rest API
 
+### 0.228 (2025-02-25)
+
+- Extended the parameter options for `/device` (and the old `/modem`) to allow more parameters:
+  - Parameter options:
+    - modem numbers
+    - external device identifiers
+  - For a device with number `ABCD EFGH` and external identifier `11 22 33 44 55 66 77 88` (e.g. a LoRaWAN DevEUI):
+    - `/device/ABCDEFGH` and `/device/ABCD%20EFGH` (spaces are ignored)
+    - `/device/1122334455667788` and any spaced variants (spaces are ignored)
+    - and the old `/modem` routes
+      - `/modem/ABCDEFGH` and `/device/ABCD%20EFGH` (spaces are ignored)
+      - `/modem/1122334455667788` and any spaced variants (spaces are ignored)
+
+- Added `/device/{number-or-identifier}/file` (POST only) to upload a file to a device (using `multipart/form-data`).
+  - Added it to the old `/modem` routes as well: `/modem/{number-or-identifier}/file`.
+
 ### 0.227 (2025-02-18)
 
 - added `/me` to get information about the current token and permissions
